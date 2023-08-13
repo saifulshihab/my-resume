@@ -1,118 +1,248 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import SectionTitle from "@/components/home/SectionTitle";
+import SkillIcon from "@/assets/icons/SkillIcon";
+import PhoneIcon from "@/assets/icons/PhoneIcon";
+import EmailIcon from "@/assets/icons/EmailIcon";
+import HomeIcon from "@/assets/icons/HomeIcon";
+import Experience from "@/components/home/Experience";
+import Education from "@/components/home/Education";
+import Project from "@/components/home/Project";
+import Skill from "@/components/home/Skill";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="min-h-screen w-full sm:w-[900px] m-auto bg-neutral-950">
+      <div className="flex h-screen">
+        <div className="relative w-[30%] h-full flex bg-neutral-900 shadow">
+          <div className="w-[40%] h-full bg-primary border-l-2 border-primary"></div>
+          <div className="w-[60%] h-full border-l-2 border-gray-300" />
+          <div className="absolute inset-0 h-[90%] bg-neutral-900 m-auto py-5 px-5 border-l-2 border-primary">
+            <div className="h-52 relative m-auto">
+              <Image
+                fill
+                src="/dp.jpg"
+                alt="dp"
+                priority
+                className="object-cover"
+              />
+            </div>
+            <div className="flex flex-col py-4">
+              <div className="flex flex-col items-center">
+                <p className="text-3xl font-bold text-primary uppercase tracking-wider">
+                  Saiful Islam
+                </p>
+                <p className="text-lg tracking-wide text-gray-300">
+                  Software Engineer
+                </p>
+                <div className="flex items-center mt-1 gap-2">
+                  <a
+                    href="https://github.com/saifulshihab"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="devicon-github-original"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/saifulshihab"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="devicon-linkedin-plain colored"></i>
+                  </a>
+                  <a
+                    href="https://facebook.com/isishihab"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="devicon-facebook-plain colored"></i>
+                  </a>
+                  <a
+                    href="https://www.behance.net/saifulis1am"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="devicon-behance-plain colored"></i>
+                  </a>
+                </div>
+              </div>
+              <div className="mt-12 flex flex-col gap-10">
+                {/* contact */}
+                <div className="flex flex-col gap-4 text-gray-300">
+                  <SectionTitle title="Contact" />
+                  <div className="flex flex-col gap-2 text-sm font-light">
+                    <div className="flex items-center gap-3">
+                      <div className="w-4 h-4">
+                        <PhoneIcon />
+                      </div>
+                      <p>+880 1782455150</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-4 h-4">
+                        <EmailIcon />
+                      </div>
+                      <p className="font-thin">saifulshihab29@gmail.com</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-4 h-4">
+                        <HomeIcon />
+                      </div>
+                      <p className="font-thin">Nikunjo-2, Dhaka 1207</p>
+                    </div>
+                  </div>
+                </div>
+                {/* skills */}
+                <div className="flex flex-col gap-4">
+                  <SectionTitle title="Stack" />
+                  <div className="flex flex-col gap-2">
+                    <Skill
+                      skill="JavaScript"
+                      icon="devicon-javascript-plain colored"
+                    />
+                    <Skill
+                      skill="TypeScript"
+                      icon="devicon-typescript-plain colored"
+                    />
+                    <Skill
+                      skill="React.js"
+                      icon="devicon-react-original colored"
+                    />
+
+                    <Skill skill="Next.js" icon="devicon-nextjs-line" />
+                    <Skill
+                      skill="Node.js"
+                      icon="devicon-nodejs-plain colored"
+                    />
+                    <Skill
+                      skill="Express"
+                      icon="devicon-express-original colored"
+                    />
+                    <Skill
+                      skill="GraphQL"
+                      icon="devicon-graphql-plain colored"
+                    />
+                    <Skill
+                      skill="MongoDB"
+                      icon="devicon-mongodb-plain colored"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-[70%] bg-neutral-950 p-5 text-gray-300">
+          <div className="w-full h-full flex flex-col gap-6">
+            {/* about */}
+            {/* <div className="flex flex-col gap-3">
+              <SectionTitle title="About Me" />
+              <p className="text-justify text-sm">
+                Passion for developing innovative programs that expedite the
+                efficiency and effectiveness of organizational success. A self &
+                quick learner 💪. Always trying to learn new tools &
+                technologies & apply best practices.
+              </p>
+            </div> */}
+            {/* experience */}
+            <div className="flex flex-col gap-3">
+              <SectionTitle title="Experience" />
+              <Experience
+                position="Software Developer"
+                from="Sept 2021"
+                company="Headless Technologies Ltd."
+                roles={[
+                  <>
+                    Creating reusable components using React.js, Ant Design &
+                    Styled-Components. Designing responsive web pages.
+                  </>,
+                  <>
+                    Creating RESTful APIs using Node.js, Express and MongoDB.
+                  </>,
+                ]}
+              />
+              <Experience
+                position="Front-End Developer"
+                from="Dec 2022"
+                company="Model-Prime Inc."
+                roles={[
+                  <>
+                    Building model-prime&apos;s web app using React.js & Ant
+                    Design
+                  </>,
+                  <>
+                    Creating RESTful APIs using Node.js, Express and MongoDB.
+                  </>,
+                ]}
+              />
+              <Experience
+                position="Software Engineer"
+                from="Apr 2021"
+                to="Jun 2021"
+                company="Sharespot"
+                roles={[
+                  <>
+                    Design, developed project business logic and functionality.
+                  </>,
+                  <>
+                    Develop fully responsive web application with modern
+                    technology using React &amp; Chakra UI.
+                  </>,
+                  <>Back-end development with Node.js Express and MongoDB.</>,
+                  <>
+                    Troubleshoot, debug and add/edit new or existing features.
+                  </>,
+                ]}
+              />
+            </div>
+            {/* education */}
+            <div className="flex flex-col gap-3">
+              <SectionTitle title="Education" />
+              <Education
+                degree="BSc in Software Engineering"
+                institute="Daffodil International University"
+                from="2017"
+                to="2021"
+                desc="CGPA: 3.82"
+              />
+              <Education
+                degree="Higher Secondary Certificate"
+                institute="Hajiganj Model University College"
+                from="2014"
+                to="2016"
+                desc="GPA: 4.75"
+              />
+            </div>
+            {/* projects */}
+            <div className="flex flex-col gap-3 text-justify ">
+              <SectionTitle title="Projects" />
+              <Project
+                name="Card 32"
+                desc="A multiplayer online card game."
+                stack="React.js, Tailwind CSS, Node.js, Socket.io, TypeScript"
+                link="https://card-32-dev.netlify.app/"
+              />
+              <Project
+                name="DevForum"
+                desc="An online platform for software developers where they can
+              create professional profiles, build portfolios, can bid on
+              freelance projects & get hired by job recruiters.
+              (University final year project)"
+                stack="React.js, Tailwind CSS, Redux, Node.js, Express, MongoDB"
+                link="https://devforum.netlify.app"
+              />
+              <Project
+                name="Trello Board Clone"
+                desc="Trello board clone with some of its basic functionality such
+                as create board, card, drop n drag."
+                stack="React.js, Tailwind CSS, GraphQL, PostgreSQL"
+                link="https://github.com/saifulshihab/fullstack-trello-clone"
+              />
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }
