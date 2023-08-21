@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full sm:w-[900px] m-auto bg-neutral-950">
+    <div className="h-screen w-full sm:w-[900px] m-auto bg-neutral-950">
       <div className="flex h-screen">
         <div className="relative w-[30%] h-full flex bg-neutral-900 shadow">
           <div className="w-[40%] h-full bg-primary border-l-2 border-primary"></div>
@@ -133,18 +133,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-[70%] bg-neutral-950 p-5 text-gray-300">
+        <div className="w-[70%] bg-neutral-950 p-5 text-gray-300 overflow-y-scroll hideScrollBar">
           <div className="w-full h-full flex flex-col gap-6">
-            {/* about */}
-            {/* <div className="flex flex-col gap-3">
-              <SectionTitle title="About Me" />
-              <p className="text-justify text-sm">
-                Passion for developing innovative programs that expedite the
-                efficiency and effectiveness of organizational success. A self &
-                quick learner 💪. Always trying to learn new tools &
-                technologies & apply best practices.
-              </p>
-            </div> */}
             {/* experience */}
             <div className="flex flex-col gap-3">
               <SectionTitle title="Experience" />
