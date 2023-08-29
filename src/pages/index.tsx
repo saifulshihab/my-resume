@@ -191,14 +191,14 @@ export default function Home() {
                 institute="Daffodil International University"
                 from="2017"
                 to="2021"
-                desc="CGPA: 3.82"
+                desc="CGPA: 3.82 out of 4"
               />
               <Education
                 degree="Higher Secondary Certificate"
                 institute="Hajiganj Model University College"
                 from="2014"
                 to="2016"
-                desc="GPA: 4.75"
+                desc="GPA: 4.75 out of 5"
               />
             </div>
             {/* projects */}
