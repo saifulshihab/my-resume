@@ -158,11 +158,8 @@ export default function Home() {
                 company="Model-Prime Inc."
                 roles={[
                   <>
-                    Building model-prime&apos;s web app using React.js & Ant
-                    Design
-                  </>,
-                  <>
-                    Creating RESTful APIs using Node.js, Express and MongoDB.
+                    Building model-prime&apos;s web application using React.js &
+                    Tailwind CSS
                   </>,
                 ]}
               />
