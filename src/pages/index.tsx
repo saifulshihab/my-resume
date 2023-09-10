@@ -96,35 +96,32 @@ export default function Home() {
                 {/* skills */}
                 <div className="flex flex-col gap-4">
                   <SectionTitle title="Stack" />
-                  <div className="flex flex-col gap-2">
+                  <div className="flex items-center flex-wrap justify-center gap-5">
                     <Skill
-                      skill="JavaScript"
+                      name="JavaScript"
                       icon="devicon-javascript-plain colored"
                     />
                     <Skill
-                      skill="TypeScript"
+                      name="TypeScript"
                       icon="devicon-typescript-plain colored"
                     />
                     <Skill
-                      skill="React.js"
+                      name="React.js"
                       icon="devicon-react-original colored"
                     />
 
-                    <Skill skill="Next.js" icon="devicon-nextjs-line" />
+                    <Skill name="Next.js" icon="devicon-nextjs-line" />
+                    <Skill name="Node.js" icon="devicon-nodejs-plain colored" />
                     <Skill
-                      skill="Node.js"
-                      icon="devicon-nodejs-plain colored"
-                    />
-                    <Skill
-                      skill="Express"
+                      name="Express"
                       icon="devicon-express-original colored"
                     />
                     <Skill
-                      skill="GraphQL"
+                      name="GraphQL"
                       icon="devicon-graphql-plain colored"
                     />
                     <Skill
-                      skill="MongoDB"
+                      name="MongoDB"
                       icon="devicon-mongodb-plain colored"
                     />
                   </div>
