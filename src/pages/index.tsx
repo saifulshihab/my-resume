@@ -95,7 +95,7 @@ export default function Home() {
                 </div>
                 {/* skills */}
                 <div className="flex flex-col gap-4">
-                  <SectionTitle title="Stack" />
+                  <SectionTitle title="Skills" />
                   <div className="flex items-center flex-wrap justify-center gap-5">
                     <Skill
                       name="JavaScript"
