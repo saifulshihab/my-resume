@@ -136,8 +136,20 @@ export default function Home() {
             <div className="flex flex-col gap-3">
               <SectionTitle title="Experience" />
               <Experience
+                position="Front-End Engineer"
+                from="Dec 2022"
+                company="Model-Prime."
+                roles={[
+                  <>
+                    Building model-prime&apos;s web application using React.js &
+                    Tailwind CSS
+                  </>,
+                ]}
+              />
+              <Experience
                 position="Software Developer"
                 from="Sept 2021"
+                to="Sept 2023"
                 company="Headless Technologies Ltd."
                 roles={[
                   <>
@@ -145,18 +157,7 @@ export default function Home() {
                     Styled-Components. Designing responsive web pages.
                   </>,
                   <>
-                    Creating RESTful APIs using Node.js, Express and MongoDB.
-                  </>,
-                ]}
-              />
-              <Experience
-                position="Front-End Developer"
-                from="Dec 2022"
-                company="Model-Prime Inc."
-                roles={[
-                  <>
-                    Building model-prime&apos;s web application using React.js &
-                    Tailwind CSS
+                    Creating RESTful APIs using Node.js, Express, and MongoDB.
                   </>,
                 ]}
               />
@@ -167,15 +168,14 @@ export default function Home() {
                 company="Sharespot"
                 roles={[
                   <>
-                    Design, developed project business logic and functionality.
+                    Design, and develop project business logic and functionality.
                   </>,
                   <>
-                    Develop fully responsive web application with modern
-                    technology using React &amp; Chakra UI.
+                    Develop fully responsive web application using React &amp; Chakra UI.
                   </>,
                   <>Back-end development with Node.js Express and MongoDB.</>,
                   <>
-                    Troubleshoot, debug and add/edit new or existing features.
+                    Troubleshoot, debug, and add/edit new or existing features.
                   </>,
                 ]}
               />
